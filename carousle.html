@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KDP Book Formatting - Professional KDP Formatting Services</title>
+  <meta name="description"
+    content="Professional KDP Book Formatting for Paperback, Hardcover and eBook. Fast delivery, KDP-ready files, and affordable pricing.">
+  <meta name="keywords"
+    content="KDP, book formatting, paperback formatting, hardcover formatting, ebook formatting, Amazon KDP">
+  <meta name="author" content="Tanveer Ahmad">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* --- Slider Section --- */
+    .slider-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .owl-carousel,
+    .owl-item,
+    .item {
+      width: 100%;
+      height: 80vh;
+      position: relative;
+    }
+
+    .item img {
+      width: 100%;
+      height: 800vh;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .slide-content {
+      position: absolute;
+      top: 20%;
+      left: 6%;
+      z-index: 6;
+      color: #fff;
+      max-width: 520px;
+    }
+
+    .slide-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      line-height: 1.05;
+      text-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+    }
+
+    .slide-content p {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-animate {
+      background: #ff6b6b;
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 8px;
+      border: 0;
+      font-weight: 600;
+      transition: all .28s ease;
+      font-size: 0.95rem;
+    }
+
+    .btn-animate:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 30px rgba(255, 107, 107, 0.22);
+    }
+
+    /* Service Cards */
+    .overlay-services {
+      position: absolute;
+      bottom: 50px;
+      left: 18px;
+      z-index: 9;
+      width: calc(100% - 460px);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .service-step {
+      flex: 1 1 180px;
+      max-width: 200px;
+      height: 140px;
+      border-radius: 12px;
+      /* overflow: hidden; */
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+    }
+
+    .service-step .card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      filter: brightness(0.55);
+      border-radius: 12px;
+    }
+
+    .service-step .content {
+      position: relative;
+      z-index: 2;
+      padding: 8px;
+    }
+
+    .service-step h5 {
+      margin: 0 0 4px 0;
+      font-size: .9rem;
+      font-weight: 700;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .service-step p {
+      margin: 0;
+      font-size: .8rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+    }
+
+    .service-step .arrow {
+      position: absolute;
+      right: 10px;
+      top: 10%;
+      transform: translateY(-25%);
+      z-index: 3;
+      font-size: 16px;
+
+      color: #ffd39b;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Form Sidebar */
+    .form-sidebar {
+      position: absolute;
+      right: 40px;
+      top: 43%;
+      transform: translateY(-50%);
+      width: 350px;
+      padding: 20px;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px) saturate(140%);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+      color: #111;
+      animation: floaty 4s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% {
+        transform: translateY(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateY(-50%) translateY(-12px);
+      }
+
+      100% {
+        transform: translateY(-50%) translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .form-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin: 14px 0;
+        background: rgba(255, 255, 255, 0.95);
+        transform: none;
+        animation: none;
+      }
+
+      .overlay-services {
+        position: relative;
+        width: 100%;
+        margin-top: 14px;
+        justify-content: center;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* (A) FIXED WRAPPER */
+    .hwrap {
+      overflow: hidden;
+      /* HIDE SCROLL BAR */
+      background: #eee;
+    }
+
+    /* (B) MOVING TICKER WRAPPER */
+    .hmove {
+      display: flex;
+    }
+
+    /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+    .hitem {
+      flex-shrink: 0;
+      width: 100%;
+      height: 30px;
+      box-sizing: border-box;
+      padding: 5px;
+      text-align: center;
+    }
+
+    /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+    /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+    @keyframes tickerh {
+      0% {
+        transform: translate3d(100%, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(-400%, 0, 0);
+      }
+    }
+
+    .hmove {
+      animation: tickerh linear 60s infinite;
+    }
+
+    .hmove:hover {
+      animation-play-state: paused;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="hwrap">
+    <div class="hmove">
+      <!-- Original set -->
+      <div class="hitem"><i class="fas fa-book"></i> Professional KDP Book Formatting at Affordable Rates</div>
+      <div class="hitem"><i class="fas fa-file-alt"></i> We Provide Paperback & eBook Formatting Services</div>
+      <div class="hitem"><i class="fas fa-clock"></i> Get Your Book Ready for Publishing in 24 Hours</div>
+      <div class="hitem"><i class="fas fa-headset"></i> Free Consultation – Contact Us Anytime</div>
+      <!-- Duplicate set -->
+      <div class="hitem"><i class="fas fa-book"></i> Professional KDP Book Formatting at Affordable Rates</div>
+      <div class="hitem"><i class="fas fa-file-alt"></i> We Provide Paperback & eBook Formatting Services</div>
+      <div class="hitem"><i class="fas fa-clock"></i> Get Your Book Ready for Publishing in 24 Hours</div>
+      <div class="hitem"><i class="fas fa-headset"></i> Free Consultation – Contact Us Anytime</div>
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="fixed-topbar-bg-color  py-2">
+    <div class="container d-flex justify-content-between align-items-center topbar-contact">
+      <div><i class="fa fa-phone me-2"></i> +92-300-0695646</div>
+      <div><i class="fa fa-envelope me-2"></i> info@kdpbookformat.com</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="./assets/images/kdplogo.png" style="height: 40px;" alt="">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link mx-2" href="#">Book Services</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="#">Designs</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="#">Price</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="#">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="#">Contact</a></li>
+        </ul>
+        <a class="btn btn-sm ms-3 text-white" style="background-color: #ffa20e;" href="#">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Slider + Service Cards + Form Section -->
+  <div class="slider-section">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="https://picsum.photos/1400/900?random=21" alt="slide1">
+        <div class="slide-content">
+          <h2><span id="typed-1"></span></h2>
+          <p>We turn your manuscript into KDP-ready files (print & eBook).</p>
+          <button class="btn-animate">Get Started</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/1400/900?random=22" alt="slide2">
+        <div class="slide-content">
+          <h2><span id="typed-2"></span></h2>
+          <p>Beautiful cover design that sells — tailored to your genre.</p>
+          <button class="btn-animate">Explore Covers</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/1400/900?random=23" alt="slide3">
+        <div class="slide-content">
+          <h2><span id="typed-3"></span></h2>
+          <p>Publishing & marketing support so your book reaches readers.</p>
+          <button class="btn-animate">Publish Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Service Cards -->
+    <div class="overlay-services p-2">
+      <div class="service-step">
+        <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=101')"></div>
+        <div class="content">
+          <h5>Step 1</h5>
+          <p>Formatting</p>
+        </div>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="service-step">
+        <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=102')"></div>
+        <div class="content">
+          <h5>Step 2</h5>
+          <p>Cover Design</p>
+        </div>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="service-step">
+        <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=103')"></div>
+        <div class="content">
+          <h5>Step 3</h5>
+          <p>Proofreading</p>
+        </div>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="service-step">
+        <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=104')"></div>
+        <div class="content">
+          <h5>Step 4</h5>
+          <p>Marketing</p>
+        </div>
+       <div class="arrow"><i class="fa fa-check"></i></div>
+
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-sidebar p-2 shadow">
+      <h5>Get a Quote</h5>
+      <!-- <form>
+        <div class="mb-2">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-2">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-2">
+          <select class="form-control">
+            <option value="">Select Service</option>
+            <option value="format">Formatting</option>
+            <option value="cover">Cover Design</option>
+            <option value="proof">Proofreading</option>
+            <option value="marketing">Marketing</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control" rows="4" placeholder="Project details..."></textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Send</button>
+      </form> -->
+      <form class="row g-2">
+        <div class="col-md-12 py-1">
+          <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-12 py-1">
+          <input type="email" class="form-control form-control-sm" placeholder="Your Email" required>
+        </div>
+        <div class="col-md-12 py-1">
+          <input type="text" class="form-control form-control-sm" placeholder="Your Phone">
+        </div>
+        <div class="col-md-6 py-1">
+          <select class="form-select form-select-sm">
+            <option selected>Select Language</option>
+            <option>English</option>
+            <option>Urdu</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-6 py-1">
+          <input type="file" class="form-control form-control-sm">
+        </div>
+
+        <div class="col-12 py-1">
+          <textarea class="form-control form-control-sm" rows="2" placeholder="Your Message"></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-warning btn-sm text-white px-3">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cook Book Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-left" data-aos="fade-up">Cook Book Design </h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your Hardcover</h5>
+            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Book Formatting Section -->
+  <section class="py-5">
+    <div class="container ">
+      <h2 class="mb-4 text-left" data-aos="fade-up">Minimal Book Formatting </h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your Hardcover</h5>
+            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Cover Design -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-left" data-aos="fade-up">Cover Designs</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class=" card  text-center p-3 border rounded h-100">
+                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
+                <h5>Book Formatting</h5>
+                <p class="small">Complete formatting for print and digital publishing.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class=" card  text-center p-3 border rounded h-100">
+                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
+                <h5>Book Formatting</h5>
+                <p class="small">Complete formatting for print and digital publishing.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class=" card  text-center p-3 border rounded h-100">
+                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
+                <h5>Book Formatting</h5>
+                <p class="small">Complete formatting for print and digital publishing.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class=" card  text-center p-3 border rounded h-100">
+                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
+                <h5>Book Formatting</h5>
+                <p class="small">Complete formatting for print and digital publishing.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center p-3 border rounded h-100">
+                <div class="mb-3"><i class="fa fa-book service-icon"></i></div>
+                <h5>Format Your Paperback</h5>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- section 2 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-hat-cowboy service-icon"></i></div>
+            <h5>Format Your Hardcover</h5>
+            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Mookup design -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-left" data-aos="fade-up">Mokup Design </h2>
+      <div class="row g-4">
+
+        <!-- section 2 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-hat-cowboy service-icon"></i></div>
+            <h5>Format Your Hardcover</h5>
+            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-3 border rounded h-100">
+            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
+            <h5>Format Your eBook</h5>
+            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Pricing -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-aos="fade-up">Services & Pricing</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card p-4 h-100 text-center">
+            <h5>Basic Formatting For Printing</h5>
+            <p class="card-price">$ 9,999</p>
+            <p class="small">Ideal for short books and simple layouts.</p>
+            <a href="contact.html" class="btn btn-outline-primary">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="card p-4 h-100 text-center border-primary">
+            <h5>Standard Package</h5>
+            <p class="card-price">$ 14,999</p>
+            <p class="small">Includes advanced typesetting and TOC.</p>
+            <a href="contact.html" class="btn btn-primary">Order Now</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="card p-4 h-100 text-center">
+            <h5>eBook Formatting</h5>
+            <p class="card-price">$ 7,499</p>
+            <p class="small">ePub/Mobi conversion for Kindle.</p>
+            <a href="contact.html" class="btn btn-outline-primary">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FAQ & Contact Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+
+        <!-- FAQ Section -->
+        <div class="col-lg-6">
+          <h2 class="mb-4 text-center" data-aos="fade-up">Services & Pricing</h2>
+          <div class="accordion" id="faqAccordion" data-aos="fade-up">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                  - What is your book formatting service?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We format books for both print and digital publishing, ensuring professional layouts for paperback,
+                  hardcover, and eBook formats.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse2">
+                  - Do you provide cover design?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we work with professional designers to create custom covers tailored to your genre and audience.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse3">
+                  - How long does formatting take?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Most formatting projects are completed within 3–5 business days depending on complexity.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse4">
+                  - Which file formats do you deliver?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We provide PDF for print, and ePub/MOBI for digital publishing platforms.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse5">
+                  - Do you offer revisions?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we offer one free round of revisions within 7 days of delivery.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse6">
+                  - How can I start my project?
+                  <span class="icon"></span>
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Simply fill out the contact form and share your manuscript. We'll get back to you with a quote.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded shadow-sm" data-aos="fade-up">
+
+            <h2 class="text-center fw-semibold mb-3">Contact Us!</h2>
+
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Your Name:</label>
+                <input type="text" class="form-control" placeholder="Type your name" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your E-mail: <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" placeholder="Type your email address" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your Phone:</label>
+                <input type="text" class="form-control" placeholder="Type your phone number with cc">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your files (optional)</label>
+                <input type="file" class="form-control">
+                <small class="text-muted">We accept all file formats</small>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your interests: <span class="text-danger">*</span></label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ebook">
+                  <label class="form-check-label" for="ebook">Ebook Formatting</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="print">
+                  <label class="form-check-label" for="print">Print Formatting</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cover">
+                  <label class="form-check-label" for="cover">Cover Design</label>
+                </div>
+                <select class="form-select mt-2" aria-label="Select Language">
+                  <option selected>Select Language</option>
+                  <option value="1">English</option>
+                  <option value="2">Urdu</option>
+                  <option value="3">Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="5" placeholder="Tell us about what you want"></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn text-white px-4" style="background-color: #ffa20e;">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Slider -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">What Our Clients Say</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3 shadow-sm"
+                alt="Ayesha" width="100" height="100">
+              <p class="fst-italic text-muted">"Excellent formatting — my paperback looked professional on day one."</p>
+              <h5 class="mb-0 fw-semibold">Ayesha</h5>
+              <small class="text-muted">Author</small>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" class="rounded-circle mb-3 shadow-sm" alt="Omar"
+                width="100" height="100">
+              <p class="fst-italic text-muted">"Fast turnaround and helpful communication."</p>
+              <h5 class="mb-0 fw-semibold">Omar</h5>
+              <small class="text-muted">Self-Published Author</small>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3 shadow-sm"
+                alt="Sarah" width="100" height="100">
+              <p class="fst-italic text-muted">"My eBook formatting worked perfectly on Kindle devices."</p>
+              <h5 class="mb-0 fw-semibold">Sarah</h5>
+              <small class="text-muted">Indie Publisher</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators mt-3">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Blog Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-5 text-center fw-bold" data-aos="fade-up">From Our Latest Blog</h2>
+
+      <!-- Blog Post 1 -->
+      <div class="row g-4 mb-4 align-items-center" data-aos="fade-up">
+        <div class="col-md-5">
+          <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded-3 shadow-sm"
+            alt="How to Format Your Paperback">
+        </div>
+        <div class="col-md-7">
+          <h5 class="fw-semibold">How to Format Your Paperback for Amazon KDP</h5>
+          <p class="small text-muted mb-2">📅 May 10, 2025 • ✍️ By Admin</p>
+          <p class="text-muted small">
+            A step-by-step guide to prepare your manuscript for paperback printing on KDP.
+          </p>
+          <a href="blog-post-1.html" class="btn btn-sm btn-primary mt-2">View Post</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="row g-4 mb-4 align-items-center flex-md-row-reverse" data-aos="fade-up" data-aos-delay="80">
+        <div class="col-md-5">
+          <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded-3 shadow-sm"
+            alt="Formatting eBook for Kindle">
+        </div>
+        <div class="col-md-7">
+          <h5 class="fw-semibold">Essential Tips for Formatting Your eBook for Kindle</h5>
+          <p class="small text-muted mb-2">📅 Apr 28, 2025 • ✍️ By Admin</p>
+          <p class="text-muted small">
+            Best practices to ensure your eBook displays correctly across Kindle devices.
+          </p>
+          <a href="blog-post-2.html" class="btn btn-sm btn-primary mt-2">View Post</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="row g-4 mb-4 align-items-center" data-aos="fade-up" data-aos-delay="160">
+        <div class="col-md-5">
+          <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded-3 shadow-sm"
+            alt="Manuscript Formatting Tips">
+        </div>
+        <div class="col-md-7">
+          <h5 class="fw-semibold">Common Manuscript Formatting Mistakes to Avoid</h5>
+          <p class="small text-muted mb-2">📅 Apr 15, 2025 • ✍️ By Admin</p>
+          <p class="text-muted small">
+            Learn about the most common formatting mistakes and how to fix them before publishing.
+          </p>
+          <a href="blog-post-3.html" class="btn btn-sm btn-primary mt-2">View Post</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="py-5 bg-primary text-light">
+    <div class="container text-center" data-aos="zoom-in">
+      <h3>Ready to publish? Get a KDP-ready file today.</h3>
+      <a href="contact.html" class="btn btn-light mt-3">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-dark text-light pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="mt-3">KDP Book Design Ready For Publishing</h4>
+          <p class="small">Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a class="text-light" href="#">Blog</a></li>
+            <li><a class="text-light" href="#">Privacy Policy</a></li>
+            <li><a class="text-light" href="#">Terms & Conditions</a></li>
+            <li><a class="text-light" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Follow Us</h6>
+          <a class="text-light me-2" href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a class="text-light me-2" href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a class="text-light" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+      <div class="row shadow">
+        <div class="col-md-6">
+          <div class="text-center text-sm-start py-3 small">&copy; 2025 KDP Book Formatting. All rights reserved.</div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-center text-sm-end py-3 small">Powered by <a href="https://tanidotdevfolio.netlify.app"
+              target="_blank" class="text-warning">Tanveer.Ahmad</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        dots: true,
+        nav: false,
+        animateOut: 'fadeOut'
+      });
+    });
+
+    AOS.init();
+
+new Typed("#typed-1", {
+  strings: ["Professional KDP Formatting"],
+  typeSpeed: 100,
+  backSpeed: 70,
+  backDelay: 1500,   // ✅ wait time before deleting (in ms)
+  loop: true
+});
+
+new Typed("#typed-2", {
+  strings: ["Custom Cover Designs"],
+  typeSpeed: 100,
+  backSpeed: 70,
+  backDelay: 1500,   // ✅ 1.5 second pause
+  loop: true
+});
+
+new Typed("#typed-3", {
+  strings: ["Publishing Made Easy"],
+  typeSpeed: 100,
+  backSpeed: 70,
+  backDelay: 1500,
+  loop: true
+});
+
+  </script>
+</body>
+
+</html>

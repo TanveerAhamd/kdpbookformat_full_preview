@@ -1,0 +1,43 @@
+/* Minimal custom CSS to keep Bootstrap look but adjust spacing */
+:root{
+--my-primary-btn:   #ffa20e;;
+}
+
+.btn-primary{
+    background-color: var(--my-primary-btn) !important;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: var(--my-primary-btn) !important;
+    color: white;
+    outline: none;
+}
+.fixed-topbar-bg-color {
+    
+    background:  #ffa20e;;
+    color: #ffffff;
+}
+
+.topbar-contact {
+    font-size: 14px;
+}
+
+body {
+    /* padding-top: 40px; */
+}
+
+.hero-img {
+    max-height: 260px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-icon {
+    font-size: 28px;
+    color: #ffa20e;
+}
+
+.card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
