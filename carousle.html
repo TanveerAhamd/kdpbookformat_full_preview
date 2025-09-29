@@ -204,6 +204,33 @@
 
     /* Responsive */
     @media (max-width: 992px) {
+          .slider-section {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+      .form-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        display: none;
+        margin: 14px 0;
+        background: rgba(255, 255, 255, 0.95);
+        transform: none;
+        animation: none;
+      }
+
+      .overlay-services {
+        position: relative;
+        width: 100%;
+        margin-top: 14px;
+        justify-content: center;
+      }
+    }
+    /* Responsive */
+    /* @media (max-width: 992px) {
       .form-sidebar {
         position: relative;
         width: 100%;
@@ -221,7 +248,8 @@
         margin-top: 14px;
         justify-content: center;
       }
-    }
+    } */
+
   </style>
     <style>
     /* Remove default arrow */
@@ -318,8 +346,8 @@
   <!-- Top Bar -->
   <div class="fixed-topbar-bg-color  py-2">
     <div class="container d-flex justify-content-between align-items-center topbar-contact">
-      <div><i class="fa fa-phone me-2"></i> +92-300-0695646</div>
-      <div><i class="fa fa-envelope me-2"></i> info@kdpbookformat.com</div>
+      <div class="small"><i class="fa fa-phone me-2"></i> +92-300-0695646</div>
+      <div class="small"><i class="fa fa-envelope me-2"></i> info@kdpbookformat.com</div>
     </div>
   </div>
 
@@ -374,8 +402,10 @@
     </div>
 
     <!-- 4 Service Cards -->
-    <div class="overlay-services p-2">
-      <div class="service-step">
+    <div class="overlay-services p-2 d-none d-md-block ">
+      <div class="row flex-wrap">
+        <div class="col-md-3">
+            <div class="service-step">
         <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=101')"></div>
         <div class="content">
           <h5>Step 1</h5>
@@ -383,7 +413,9 @@
         </div>
         <div class="arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="service-step">
+        </div>
+       <div class="col-md-3">
+         <div class="service-step">
         <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=102')"></div>
         <div class="content">
           <h5>Step 2</h5>
@@ -391,7 +423,9 @@
         </div>
         <div class="arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="service-step">
+       </div>
+     <div class="col-md-3">
+       <div class="service-step">
         <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=103')"></div>
         <div class="content">
           <h5>Step 3</h5>
@@ -399,7 +433,9 @@
         </div>
         <div class="arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
-      <div class="service-step">
+     </div>
+     <div class="col-md-3">
+        <div class="service-step">
         <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=104')"></div>
         <div class="content">
           <h5>Step 4</h5>
@@ -408,6 +444,10 @@
        <div class="arrow"><i class="fa fa-check"></i></div>
 
       </div>
+     </div>
+    
+      </div>
+     
     </div>
 
     <!-- Contact Form -->
