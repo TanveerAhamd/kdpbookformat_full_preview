@@ -335,10 +335,12 @@
     }
   </style>
   <style>
-    /* Gallery images - fixed height */
+    /* Card Images fixed height */
     .gallery-img {
-      height: 220px;
+      height: 200px;
+      /* fix height */
       object-fit: cover;
+      /* crop without distortion */
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       cursor: pointer;
     }
@@ -346,31 +348,26 @@
     figure {
       margin: 0;
       position: relative;
-      overflow: hidden;
-      border-radius: 10px;
     }
 
-    /* Caption - hidden by default, slide up on hover */
     figcaption {
       position: absolute;
       bottom: -100%;
       left: 0;
       width: 100%;
-      padding: 10px;
+      padding: 5px;
       text-align: center;
       color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      backdrop-filter: blur(20px);
-      background: rgb(243, 168, 5);
+      backdrop-filter: blur(8px);
+      background: rgba(255, 171, 52, 0.678);
       border-top: 1px solid rgba(255, 255, 255, 0.25);
-      transition: bottom 0.5s ease-in-out;
+      transition: bottom 0.6s ease-in-out;
+      cursor: pointer;
     }
 
-    /* Hover effects */
-    .card:hover .gallery-img {
-      transform: scale(1.06);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    .card:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
     .card:hover figcaption {
@@ -380,6 +377,7 @@
 </head>
 
 <body>
+
   <div class="hwrap">
     <div class="hmove">
       <!-- Original set -->
@@ -425,135 +423,144 @@
   </nav>
 
   <!-- ✅ Slider + Service Cards + Form Section -->
-  <section class="py-3">
-    <div class="">
-      <div class="slider-section position-relative">
+  <div class="slider-section">
 
-        <!-- Owl Carousel Slider -->
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="./assets/images/Sliders/Slider 1.jpg" alt="slide1" class="img-fluid w-100">
-            <div class="slide-content text-center">
-              <h2><span id="typed-1"></span></h2>
-              <p>We turn your manuscript into KDP-ready files (print & eBook).</p>
-              <button class="btn btn-warning text-white btn-sm">Get Started</button>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <!-- <img src="https://picsum.photos/1400/900?random=21" alt="slide1"> -->
+        <img src="./assets/images/Sliders/Slider 1.jpg" alt="slide1">
+        <div class="slide-content">
+          <h2><span id="typed-1"></span></h2>
+          <p>We turn your manuscript into KDP-ready files (print & eBook).</p>
+          <button class="btn-animate">Get Started</button>
+        </div>
+      </div>
+      <div class="item">
+        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide2"> -->
+        <img src="./assets/images/Sliders/Slider 2.jpg" alt="slide1">
+        <div class="slide-content">
+          <h2><span id="typed-2"></span></h2>
+          <p>Beautiful cover design that sells — tailored to your genre.</p>
+          <button class="btn-animate">Explore Covers</button>
+        </div>
+      </div>
+      <div class="item">
+        <!-- <img src="https://picsum.photos/1400/900?random=23" alt="slide3"> -->
+        <img src="./assets/images/Sliders/Slider 3.jpg" alt="slide1">
+        <div class="slide-content">
+          <h2><span id="typed-3"></span></h2>
+          <p>Publishing & marketing support so your book reaches readers.</p>
+          <button class="btn-animate">Publish Now</button>
+        </div>
+      </div>
+      <div class="item">
+        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide4"> -->
+        <img src="./assets/images/Sliders/Slider 4.jpg" alt="slide1">
+        <div class="slide-content">
+          <h2><span id="typed-2"></span></h2>
+          <p>Beautiful cover design that sells — tailored to your genre.</p>
+          <button class="btn-animate">Explore Covers</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- 4 Service Cards -->
+    <div class="overlay-services p-2 d-none d-md-block ">
+      <div class="row flex-wrap">
+        <div class="col-md-3">
+          <div class="service-step">
+            <!-- <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=101')"></div> -->
+            <div class="card-bg" style="background-image:url('./assets/images/Sliders/Slider/1.jpg')"></div>
+            <div class="content">
+              <h5>Step 1</h5>
+              <p>Formatting</p>
             </div>
-          </div>
-          <div class="item">
-            <img src="./assets/images/Sliders/Slider 2.jpg" alt="slide2" class="img-fluid w-100">
-            <div class="slide-content text-center">
-              <h2><span id="typed-2"></span></h2>
-              <p>Beautiful cover design that sells — tailored to your genre.</p>
-              <button class="btn btn-warning text-white btn-sm">Explore Covers</button>
-            </div>
-          </div>
-          <div class="item">
-            <img src="./assets/images/Sliders/Slider 3.jpg" alt="slide3" class="img-fluid w-100">
-            <div class="slide-content text-center">
-              <h2><span id="typed-3"></span></h2>
-              <p>Publishing & marketing support so your book reaches readers.</p>
-              <button class="btn btn-warning text-white btn-sm">Publish Now</button>
-            </div>
-          </div>
-          <div class="item">
-            <img src="./assets/images/Sliders/Slider 4.jpg" alt="slide4" class="img-fluid w-100">
-            <div class="slide-content text-center">
-              <h2><span id="typed-4"></span></h2>
-              <p>Beautiful cover design that sells — tailored to your genre.</p>
-              <button class="btn btn-warning text-white btn-sm">Explore Covers</button>
-            </div>
+            <div class="arrow"><i class="fas fa-arrow-right"></i></div>
           </div>
         </div>
-
-        <!-- ✅ 4 Service Cards -->
-        <div class="overlay-services py-4 d-none d-md-block">
-          <div class="row g-3">
-            <div class="col-md-3">
-              <div class="service-step shadow-sm">
-                <div class="card-bg" style="background-image:url('./assets/images/Sliders/Slider/1.jpg')"></div>
-                <div class="content">
-                  <h5>Step 1</h5>
-                  <p>Formatting</p>
-                </div>
-                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
+        <div class="col-md-3">
+          <div class="service-step">
+            <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=102')"></div>
+            <div class="content">
+              <h5>Step 2</h5>
+              <p>Cover Design</p>
             </div>
-            <div class="col-md-3">
-              <div class="service-step shadow-sm">
-                <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=102')"></div>
-                <div class="content">
-                  <h5>Step 2</h5>
-                  <p>Cover Design</p>
-                </div>
-                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="service-step shadow-sm">
-                <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=103')"></div>
-                <div class="content">
-                  <h5>Step 3</h5>
-                  <p>Proofreading</p>
-                </div>
-                <div class="arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="service-step shadow-sm">
-                <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=104')"></div>
-                <div class="content">
-                  <h5>Step 4</h5>
-                  <p>Marketing</p>
-                </div>
-                <div class="arrow"><i class="fa fa-check"></i></div>
-              </div>
-            </div>
+            <div class="arrow"><i class="fas fa-arrow-right"></i></div>
           </div>
         </div>
+        <div class="col-md-3">
+          <div class="service-step">
+            <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=103')"></div>
+            <div class="content">
+              <h5>Step 3</h5>
+              <p>Proofreading</p>
+            </div>
+            <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service-step">
+            <div class="card-bg" style="background-image:url('https://picsum.photos/400/250?random=104')"></div>
+            <div class="content">
+              <h5>Step 4</h5>
+              <p>Marketing</p>
+            </div>
+            <div class="arrow"><i class="fa fa-check"></i></div>
 
-        <!-- ✅ Contact Form -->
-        <div class="form-sidebar p-3 shadow rounded mt-4">
-          <h5 class="rounded py-2 shadow-sm text-center mb-3"
-            style="background: linear-gradient(90deg, #ff9c07, #ff6a00); color: #ffffff; font-weight: 600; font-size: 15px;">
-            🚀 Ready to Publish?
-          </h5>
-
-          <form class="row g-2">
-            <div class="col-12">
-              <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
-            </div>
-            <div class="col-12">
-              <input type="email" class="form-control form-control-sm" placeholder="Your Email" required>
-            </div>
-            <div class="col-12">
-              <input type="text" class="form-control form-control-sm" placeholder="Your Phone">
-            </div>
-            <div class="col-md-6">
-              <select class="form-select form-select-sm">
-                <option selected>Select Language</option>
-                <option>English</option>
-                <option>Urdu</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <input type="file" class="form-control form-control-sm">
-            </div>
-            <div class="col-12">
-              <textarea class="form-control form-control-sm" rows="3" placeholder="Your Message"></textarea>
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-warning btn-sm text-white px-3">Get in Touch</button>
-            </div>
-          </form>
+          </div>
         </div>
 
       </div>
+
     </div>
-  </section>
+
+    <!-- Contact Form -->
+    <div class="form-sidebar p-2 shadow">
+      <h5 style="background: linear-gradient(90deg, #ff9c07, #ff6a00);
+           color: #ffffff; 
+           text-align: center; 
+           letter-spacing: 1px; 
+           font-weight: 600;
+           font-size: 15px;" class="rounded py-2 shadow-sm">
+        🚀 Ready to Publish?
+      </h5>
+
+      <form class="row g-2">
+        <div class="col-md-12 py-1">
+          <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-12 py-1">
+          <input type="email" class="form-control form-control-sm" placeholder="Your Email" required>
+        </div>
+        <div class="col-md-12 py-1">
+          <input type="text" class="form-control form-control-sm" placeholder="Your Phone">
+        </div>
+        <div class="col-md-6 py-1">
+          <select class="form-select form-select-sm">
+            <option selected>Select Language</option>
+            <option>English</option>
+            <option>Urdu</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-6 py-1">
+          <input type="file" class="form-control form-control-sm">
+        </div>
+
+        <div class="col-12 py-1">
+          <textarea class="form-control form-control-sm" rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-warning btn-sm text-white px-3">Get in Touch</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- Cook Book Section -->
-  <section class="py-3">
+  <section class="py-4">
     <div class="container">
       <h2 class="mb-4 text-left fw-bold" data-aos="">Cook Book Design</h2>
       <div class="row g-4">
@@ -562,12 +569,13 @@
           <div class="card overflow-hidden h-100 border-0 shadow-sm">
 
             <figure class="m-0 position-relative">
-              <img src="./assets/images/Cookbook_designs/Cookbook design 1.jpg" class="img-fluid w-100 gallery-img"
+              <img src="./assets/images/Cookbook_designs/Cookbook design 2.jpg" class="img-fluid w-100 gallery-img"
                 alt="Cookbook Design 1" loading="lazy">
               <figcaption>
                 <p>Sample description of the design.</p>
               </figcaption>
             </figure>
+
           </div>
         </div>
 
@@ -586,9 +594,10 @@
         <div class="col-12 col-md-3" data-aos="" data-aos-delay="200">
           <div class="card overflow-hidden h-100 border-0 shadow-sm">
             <figure class="m-0 position-relative">
-              <img src="./assets/images/Cover_section/Cover 2.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
+              <img src="./assets/images/Cookbook_designs/cookbook cover 3.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
                 loading="lazy">
               <figcaption>
+
                 <p>Modern and stylish book cover.</p>
               </figcaption>
             </figure>
@@ -599,84 +608,120 @@
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl p-3">
-      <div class="modal-content position-relative border-0 rounded-4 overflow-hidden shadow-lg"
-        style="background: rgba(20,20,20,0.85); backdrop-filter: blur(10px);">
-
-        <!-- Close button -->
-        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 fs-5"
-          data-bs-dismiss="modal" aria-label="Close"></button>
-
-        <div class="modal-body p-0">
-          <img id="modalImage" src="" class="img-fluid w-100 rounded-4" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Minimal Book Formatting Section -->
-  <section class="py-3">
-    <div class="container ">
-      <h2 class="mb-4 text-left" data-aos="fade-up">Minimal Book Formatting </h2>
+  <section class="py-4 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Minimal Book Formatting</h2>
       <div class="row g-4">
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="text-center p-3 border rounded h-100">
-            <h5>Format Your Hardcover</h5>
-            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+
+        <div class="col-12 col-sm-12 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="card overflow-hidden h-100 border-0 shadow-sm">
+
+            <figure class="m-0 position-relative">
+              <img src="./assets/images/Cookbook_designs/Cookbook design 1.jpg" class="img-fluid w-100 gallery-img"
+                alt="Cookbook Design 1" loading="lazy">
+              <figcaption>
+                <p>Sample description of the design.</p>
+
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="card overflow-hidden h-100 border-0 shadow-sm">
+            <figure class="m-0 position-relative">
+              <img src="./assets/images/Cover_section/Cover 1.jpg" class="img-fluid w-100 gallery-img" alt="Cover 1"
+                loading="lazy">
+              <figcaption>
+                <p>Elegant cover for your ebook.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+
+        <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="card overflow-hidden h-100 border-0 shadow-sm">
+            <figure class="m-0 position-relative">
+              <img src="./assets/images/Cover_section/Cover 2.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
+                loading="lazy">
+              <figcaption>
+
+                <p>Modern and stylish book cover.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
+
   <!--Cover Design -->
-  <section class="py-3">
+  <section class="py-4">
     <div class="container">
-      <h2 class="mb-4 text-left" data-aos="fade-up">Cover Designs</h2>
+      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Cover Designs</h2>
       <div class="row g-4">
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="50">
 
           <div class="row">
             <div class="col-md-6">
-              <div class=" card  text-center p-3 border rounded h-100">
-                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
-                <h5>Book Formatting</h5>
-                <p class="small">Complete formatting for print and digital publishing.</p>
+              <div class="mb-3" data-aos="" data-aos-delay="200">
+                <div class="card overflow-hidden h-100 border-0 shadow-sm">
+                  <figure class="m-0 position-relative">
+                    <img src="./assets/images/Cover_section/Cover 3.jpg" class="img-fluid w-100 gallery-img"
+                      alt="Cover 2" loading="lazy">
+                    <figcaption>
+
+                      <p>Modern and stylish book cover.</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class=" card  text-center p-3 border rounded h-100">
-                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
-                <h5>Book Formatting</h5>
-                <p class="small">Complete formatting for print and digital publishing.</p>
+              <div class="mb-3" data-aos="" data-aos-delay="200">
+                <div class="card overflow-hidden h-100 border-0 shadow-sm">
+                  <figure class="m-0 position-relative">
+                    <img src="./assets/images/Cover_section/Cover 2.jpg" class="img-fluid w-100 gallery-img"
+                      alt="Cover 2" loading="lazy">
+                    <figcaption>
+
+                      <p>Modern and stylish book cover.</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class=" card  text-center p-3 border rounded h-100">
-                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
-                <h5>Book Formatting</h5>
-                <p class="small">Complete formatting for print and digital publishing.</p>
+              <div class="mb-3" data-aos="" data-aos-delay="200">
+                <div class="card overflow-hidden h-100 border-0 shadow-sm">
+                  <figure class="m-0 position-relative">
+                    <img src="./assets/images/Cover_section/Cover 4.jpg" class="img-fluid w-100 gallery-img"
+                      alt="Cover 2" loading="lazy">
+                    <figcaption>
+
+                      <p>Modern and stylish book cover.</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class=" card  text-center p-3 border rounded h-100">
-                <div class="mb-3"><i class="fa fa-file-alt service-icon"></i></div>
-                <h5>Book Formatting</h5>
-                <p class="small">Complete formatting for print and digital publishing.</p>
+              <div class="mb-3" data-aos="" data-aos-delay="200">
+                <div class="card overflow-hidden h-100 border-0 shadow-sm">
+                  <figure class="m-0 position-relative">
+                    <img src="./assets/images/Cover_section/Cover 1.jpg" class="img-fluid w-100 gallery-img"
+                      alt="Cover 2" loading="lazy">
+                    <figcaption>
+
+                      <p>Modern and stylish book cover.</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
 
@@ -684,105 +729,127 @@
 
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="text-center p-3 border rounded h-100">
-                <div class="mb-3"><i class="fa fa-book service-icon"></i></div>
-                <h5>Format Your Paperback</h5>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-                <p class="small">Trim settings, margins, headers, page numbers, and more.</p>
-              </div>
+          <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Cover_section/cover main image.jpg" style="height: 100%;"
+                  class="img-fluid w-100 gallery-img" alt="Cover 2" loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
             </div>
           </div>
-
         </div>
         <!-- section 2 -->
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-hat-cowboy service-icon"></i></div>
-            <h5>Format Your Hardcover</h5>
-            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
-          </div>
-        </div>
+ 
       </div>
     </div>
   </section>
 
   <!-- Mookup design -->
-  <section class="py-3">
+  <section class="py-4 bg-light">
     <div class="container">
-      <h2 class="mb-4 text-left" data-aos="fade-up">Mokup Design </h2>
+      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Mokup Design </h2>
       <div class="row g-4">
 
         <!-- section 2 -->
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-hat-cowboy service-icon"></i></div>
-            <h5>Format Your Hardcover</h5>
-            <p class="small">Hardcover-friendly layout, bleed, and print specs.</p>
+          <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Sliders/Slider 4.jpg" class="img-fluid w-100 gallery-img"
+                  alt="Cover 2" loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Sliders/Slider 3.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
+                  loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+          <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Sliders/Slider 2.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
+                  loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+        <!-- secod section -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
+                  alt="Cover 2" loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+             <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
+                  alt="Cover 2" loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-center p-3 border rounded h-100">
-            <div class="mb-3"><i class="fa fa-tablet-alt service-icon"></i></div>
-            <h5>Format Your eBook</h5>
-            <p class="small">Kindle-compatible ePub/MOBI formatting and cover setup.</p>
+             <div class="" data-aos="" data-aos-delay="200">
+            <div class="card overflow-hidden h-100 border-0 shadow-sm">
+              <figure class="m-0 position-relative">
+                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
+                  alt="Cover 2" loading="lazy">
+                <figcaption>
+
+                  <p>Modern and stylish book cover.</p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- Pricing -->
-  <section class="py-3">
+  <section class="py-4">
     <div class="container">
-      <h2 class="mb-4 text-center" data-aos="fade-up">Services & Pricing</h2>
+      <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">Services & Pricing</h2>
       <div class="row g-4">
         <div class="col-md-4" data-aos="fade-up">
           <div class="card p-4 h-100 text-center">
@@ -813,13 +880,13 @@
   </section>
 
   <!-- FAQ & Contact Form Section -->
-  <section class="py-3">
+  <section class="py-4">
     <div class="container">
       <div class="row g-5 align-items-start">
 
         <!-- FAQ Section -->
         <div class="col-lg-6">
-          <h2 class="mb-4 text-center" data-aos="fade-up">Services & Pricing</h2>
+          <h2 class="mb-4 text-center fw-semibold" data-aos="fade-up">Services & Pricing</h2>
           <div class="accordion" id="faqAccordion" data-aos="fade-up">
 
             <div class="accordion-item">
@@ -984,7 +1051,7 @@
   </section>
 
   <!-- Testimonials Slider -->
-  <section class="py-3 bg-light">
+  <section class="py-4 bg-light">
     <div class="container">
       <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">What Our Clients Say</h2>
 
@@ -1048,7 +1115,7 @@
   </section>
 
   <!-- Blog Section -->
-  <section class="py-3 bg-light">
+  <section class="py-4 bg-light">
     <div class="container">
       <h2 class="mb-5 text-center fw-bold" data-aos="fade-up">From Our Latest Blog</h2>
 
@@ -1103,8 +1170,9 @@
     </div>
   </section>
 
+
   <!-- CTA -->
-  <section class="py-3 bg-primary text-light">
+  <section class="py-4 bg-primary text-light">
     <div class="container text-center" data-aos="zoom-in">
       <h3>Ready to publish? Get a KDP-ready file today.</h3>
       <a href="contact.html" class="btn btn-light mt-3">Request a Quote</a>
@@ -1147,13 +1215,24 @@
       </div>
     </div>
   </footer>
+  <!-- Modal for picture full view -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg p-3">
+      <div class="modal-content bg-dark position-relative border-0 rounded-3 overflow-hidden">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100 rounded-3" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <script>
     $(document).ready(function () {
       $(".owl-carousel").owlCarousel({
@@ -1193,9 +1272,7 @@
     });
 
   </script>
-
   <script>
-    // Modal logic
     const galleryImages = document.querySelectorAll(".gallery-img");
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
@@ -1209,7 +1286,6 @@
       });
     });
   </script>
-
 </body>
 
 </html>
