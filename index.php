@@ -375,60 +375,58 @@
     }
   </style>
 
-    <!-- Custom CSS -->
-   <style>
+  <!-- Custom CSS -->
+  <style>
+    .card-custom {
+      position: relative;
 
+      overflow: hidden;
+      /* border-radius: 20px; */
+      cursor: pointer;
+      /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
+      transition: transform 0.3s;
+    }
 
-  .card-custom {
-    position: relative;
-  
-    overflow: hidden;
-    /* border-radius: 20px; */
-    cursor: pointer;
-    /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
-    transition: transform 0.3s;
-  }
+    .card-custom img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
 
-  .card-custom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+    .card-custom:hover img {
+      transform: scale(1.05);
+    }
 
-  .card-custom:hover img {
-    transform: scale(1.05);
-  }
+    .top-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      /* background: linear-gradient(to bottom, rgba(255,165,0,0.5), transparent); */
+    }
 
-  .top-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    /* background: linear-gradient(to bottom, rgba(255,165,0,0.5), transparent); */
-  }
+    .bottom-right-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, rgba(8, 6, 1, 0.5), transparent);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 10px;
 
-  .bottom-right-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-   background: linear-gradient(to top, rgba(8, 6, 1, 0.5), transparent);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 10px;
-   
-  }
+    }
 
-  .caption {
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-  }
-</style>
+    .caption {
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  </style>
 
 </head>
 
@@ -483,8 +481,8 @@
 
     <div class="owl-carousel owl-theme">
       <div class="item">
-        <img src="https://picsum.photos/1400/900?random=21" alt="slide1">
-        <!-- <img src="./assets/images/Sliders/Slider 1.jpg" alt="slide1"> -->
+        <!-- <img src="https://picsum.photos/1400/900?random=21" alt="slide1"> -->
+        <img src="./assets/images/Sliders/Slider 1.jpg" alt="slide1">
         <div class="slide-content">
           <h2><span id="typed-1"></span></h2>
           <p>We turn your manuscript into KDP-ready files (print & eBook).</p>
@@ -492,8 +490,8 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://picsum.photos/1400/900?random=22" alt="slide2">
-        <!-- <img src="./assets/images/Sliders/Slider 2.jpg" alt="slide2"> -->
+        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide2"> -->
+        <img src="./assets/images/Sliders/Slider 2.jpg" alt="slide2">
         <div class="slide-content">
           <h2><span id="typed-2"></span></h2>
           <p>Beautiful cover design that sells — tailored to your genre.</p>
@@ -501,8 +499,8 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://picsum.photos/1400/900?random=23" alt="slide3">
-        <!-- <img src="./assets/images/Sliders/Slider 3.jpg" alt="slide3"> -->
+        <!-- <img src="https://picsum.photos/1400/900?random=23" alt="slide3"> -->
+        <img src="./assets/images/Sliders/Slider 3.jpg" alt="slide3">
         <div class="slide-content">
           <h2><span id="typed-3"></span></h2>
           <p>Publishing & marketing support so your book reaches readers.</p>
@@ -510,10 +508,10 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://picsum.photos/1400/900?random=22" alt="slide4">
-        <!-- <img src="./assets/images/Sliders/Slider 4.jpg" alt="slide4"> -->
+        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide4"> -->
+        <img src="./assets/images/Sliders/Slider 4.jpg" alt="slide4">
         <div class="slide-content">
-          <h2><span id="typed-2"></span></h2>
+          <h2><span id="typed-4"></span></h2>
           <p>Beautiful cover design that sells — tailored to your genre.</p>
           <button class="btn-animate">Explore Covers</button>
         </div>
@@ -731,7 +729,7 @@
     const imageModal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
 
-    imageModal.addEventListener('show.bs.modal', function (event) {
+    imageModal.addEventListener('show.bs.modal', function(event) {
       const card = event.relatedTarget; // clicked card
       const imgSrc = card.getAttribute('data-bs-img');
       modalImage.src = imgSrc;
@@ -1313,7 +1311,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
@@ -1330,7 +1328,7 @@
       strings: ["Professional KDP Formatting"],
       typeSpeed: 100,
       backSpeed: 70,
-      backDelay: 1500,   // ✅ wait time before deleting (in ms)
+      backDelay: 1500, // ✅ wait time before deleting (in ms)
       loop: true
     });
 
@@ -1338,7 +1336,15 @@
       strings: ["Custom Cover Designs"],
       typeSpeed: 100,
       backSpeed: 70,
-      backDelay: 1500,   // ✅ 1.5 second pause
+      backDelay: 1500, // ✅ 1.5 second pause
+      loop: true
+    });
+
+    new Typed("#typed-3", {
+      strings: ["Get Ready To Publish (KD_Ebook)"],
+      typeSpeed: 100,
+      backSpeed: 70,
+      backDelay: 1500, // ✅ 1.5 second pause
       loop: true
     });
 
@@ -1349,7 +1355,6 @@
       backDelay: 1500,
       loop: true
     });
-
   </script>
   <script>
     const galleryImages = document.querySelectorAll(".gallery-img");
