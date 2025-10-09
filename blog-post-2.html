@@ -10,6 +10,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body style="font-family:'Poppins',sans-serif">
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="./assets/images/kdplogo.png" style="height: 40px;" alt="KDP Book Formatting Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link mx-2" href="index.html#book-services">Book Services</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="index.html#designs">Designs</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="index.html#pricing">Price</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="index.html#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link mx-2" href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <a class="btn btn-sm ms-3 text-white px-3" style="background-color: #ffa20e;" href="contact.html">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <section class="py-5">
     <div class="container">
@@ -33,11 +59,66 @@
     </div>
   </section>
 
-  <footer class="bg-dark text-light pt-4">
-    <div class="container text-center small py-3">
-      &copy; 2025 KDP Book Formatting. All rights reserved.
+ <!-- ✅ Footer -->
+  <footer class="bg-dark text-light pt-4 mt-5">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <div class="d-flex flex-column gap-2">
+            <div>
+              <img style="height: 40px;" class="d-inline-block img-fluid" src="./assets/images/Logo white text-01.png"
+                alt="KDP Book Design Logo">
+            </div>
+            <h4 class="mt-2 fw-semibold" style="color: rgba(255,255,255,0.9);">
+              KDP Book Design Ready For Publishing
+            </h4>
+            <p class="mb-0" style="color: rgba(255,255,255,0.75);">
+              Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="blog.html">Blog</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="terms.html">Terms & Conditions</a></li>
+            <li><a class="text-decoration-none d-block" style="color: rgba(255,255,255,0.75);"
+                href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Follow Us</h6>
+          <div class="d-flex align-items-center">
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-facebook fa-lg"></i></a>
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-3">
+
+      <div class="row align-items-center pb-4">
+        <div class="col-md-6 text-center text-md-start small" style="color: rgba(255,255,255,0.6);">
+          &copy; 2025 <strong style="color: rgba(255,255,255,0.85);">KDP Book Formatting</strong>. All rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end small" style="color: rgba(255,255,255,0.6);">
+          Powered by
+          <a href="https://tanidotdevfolio.netlify.app" target="_blank" class="fw-semibold text-decoration-none"
+            style="color: #fcbf49;">
+            Tanveer Ahmad
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
+
 
 </body>
 </html>
