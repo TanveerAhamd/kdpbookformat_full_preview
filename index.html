@@ -59,10 +59,14 @@
     .slide-content {
       position: absolute;
       top: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
       left: 6%;
       z-index: 6;
       color: #fff;
-      max-width: 520px;
+      max-width: 600px;
     }
 
     .slide-content h2 {
@@ -428,6 +432,165 @@
     }
   </style>
 
+  <style>
+    /* Fix for typing area */
+    .slide-content h2 {
+      min-height: 60px;
+      /* fix typing area height (adjust as needed) */
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-size: 2rem;
+      /* optional for consistent look */
+      margin-bottom: 10px;
+    }
+
+    /* Optional: smoother cursor */
+    .typed-cursor {
+      color: #ff6a00;
+      font-weight: bold;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50%,
+      100% {
+        opacity: 1;
+      }
+
+      25%,
+      75% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slide-content h2 {
+        min-height: 45px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <style>
+    .pricing-card {
+      transition: all 0.3s ease-in-out;
+      border-radius: 15px;
+      background: #fff;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-card .card-price {
+      font-size: 2rem;
+      color: #000000;
+    }
+
+    .highlight-card {
+      background: linear-gradient(135deg, #007bff10, #ffffff);
+      border-top: 4px solid #000000;
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.1);
+    }
+
+    .highlight-card:hover {
+      box-shadow: 0 15px 35px rgba(0, 123, 255, 0.2);
+    }
+
+    .btn {
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+  <style>
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+  </style>
+
+
+  <!-- Blog Hover Effect Styles -->
+  <style>
+    .blog-img {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .blog-img-wrapper:hover .blog-img {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-post {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+<style>
+  /* --- Navbar link underline hover & active effect --- */
+.navbar-nav .nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+/* underline effect */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffa20e;
+  transition: width 0.3s ease;
+}
+
+/* on hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* active link */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* optional hover color */
+.navbar-nav .nav-link:hover {
+  color: #ffa20e !important;
+}
+
+
+</style>
+
 </head>
 
 <body>
@@ -455,69 +618,72 @@
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <img src="./assets/images/kdplogo.png" style="height: 40px;" alt="">
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="./assets/images/kdplogo.png" style="height: 40px;" alt="KDP Book Formatting Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link mx-2" href="index.html#book-services">Book Services</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="index.html#designs">Designs</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="index.html#pricing">Price</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="index.html#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link mx-2" href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-sm ms-3 text-white px-3" style="background-color: #ffa20e;" href="contact.html">
+        Get a Quote
       </a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link mx-2" href="#">Book Services</a></li>
-          <li class="nav-item"><a class="nav-link mx-2" href="#">Designs</a></li>
-          <li class="nav-item"><a class="nav-link mx-2" href="#">Price</a></li>
-          <li class="nav-item"><a class="nav-link mx-2" href="#">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link mx-2" href="#">Contact</a></li>
-        </ul>
-        <a class="btn btn-sm ms-3 text-white" style="background-color: #ffa20e;" href="#">Get a Quote</a>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- ✅ Slider + Service Cards + Form Section -->
   <div class="slider-section">
 
     <div class="owl-carousel owl-theme">
       <div class="item">
-        <!-- <img src="https://picsum.photos/1400/900?random=21" alt="slide1"> -->
         <img src="./assets/images/Sliders/Slider 1.jpg" alt="slide1">
         <div class="slide-content">
-          <h2><span id="typed-1"></span></h2>
+          <h2><span></span></h2>
           <p>We turn your manuscript into KDP-ready files (print & eBook).</p>
           <button class="btn-animate">Get Started</button>
         </div>
       </div>
       <div class="item">
-        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide2"> -->
         <img src="./assets/images/Sliders/Slider 2.jpg" alt="slide2">
         <div class="slide-content">
-          <h2><span id="typed-2"></span></h2>
+          <h2><span></span></h2>
           <p>Beautiful cover design that sells — tailored to your genre.</p>
           <button class="btn-animate">Explore Covers</button>
         </div>
       </div>
       <div class="item">
-        <!-- <img src="https://picsum.photos/1400/900?random=23" alt="slide3"> -->
         <img src="./assets/images/Sliders/Slider 3.jpg" alt="slide3">
         <div class="slide-content">
-          <h2><span id="typed-3"></span></h2>
+          <h2><span></span></h2>
           <p>Publishing & marketing support so your book reaches readers.</p>
           <button class="btn-animate">Publish Now</button>
         </div>
       </div>
       <div class="item">
-        <!-- <img src="https://picsum.photos/1400/900?random=22" alt="slide4"> -->
         <img src="./assets/images/Sliders/Slider 4.jpg" alt="slide4">
         <div class="slide-content">
-          <h2><span id="typed-4"></span></h2>
-          <p>Beautiful cover design that sells — tailored to your genre.</p>
-          <button class="btn-animate">Explore Covers</button>
+          <h2><span></span></h2>
+          <p>We simplify your KDP publishing journey — from file prep to launch.</p>
+          <button class="btn-animate">Start Publishing</button>
         </div>
       </div>
-
     </div>
+
 
 
     <!-- 4 Service Cards -->
@@ -614,53 +780,50 @@
   </div>
 
   <!-- Cook Book Section -->
-  <section class="py-4">
+  <section class="py-4" id="designs">
     <div class="container">
-      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up"> Cook Book Design</h2>
+      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">🍳 Cook Book Design</h2>
+
       <div class="row g-4">
-
+        <!-- Big Left Card -->
         <div class="col-12 col-sm-12 col-md-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="card overflow-hidden h-100 border-0 shadow-sm">
-
-            <figure class="m-0 position-relative">
-              <img src="./assets/images/Cookbook_designs/Cookbook design 2.jpg" class="img-fluid w-100 gallery-img"
-                alt="Cookbook Design 1" loading="lazy">
-              <figcaption>
-                <p>Sample description of the design.</p>
-              </figcaption>
-            </figure>
-
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cookbook_designs/Cookbook design 2.jpg">
+            <img src="./assets/images/Cookbook_designs/Cookbook design 2.jpg" alt="Cookbook Design 1">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🥗 Fresh and modern cookbook layout design.</div>
+            </div>
           </div>
         </div>
 
+        <!-- Small Right Card 1 -->
         <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card overflow-hidden h-100 border-0 shadow-sm">
-            <figure class="m-0 position-relative">
-              <img src="./assets/images/Cover_section/Cover 1.jpg" class="img-fluid w-100 gallery-img" alt="Cover 1"
-                loading="lazy">
-              <figcaption>
-                <p>Elegant cover for your ebook.</p>
-              </figcaption>
-            </figure>
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cover_section/Cover 1.jpg">
+            <img src="./assets/images/Cover_section/Cover 1.jpg" alt="Cover 1">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">📖 Elegant cover for your cookbook.</div>
+            </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card overflow-hidden h-100 border-0 shadow-sm">
-            <figure class="m-0 position-relative">
-              <img src="./assets/images/Cookbook_designs/cookbook cover 3.jpg" class="img-fluid w-100 gallery-img"
-                alt="Cover 2" loading="lazy">
-              <figcaption>
-
-                <p>Modern and stylish book cover.</p>
-              </figcaption>
-            </figure>
+        <!-- Small Right Card 2 -->
+        <div class="col-12 col-md-3" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cookbook_designs/cookbook cover 3.jpg">
+            <img src="./assets/images/Cookbook_designs/cookbook cover 3.jpg" alt="Cookbook Cover 3">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🍰 Modern and appetizing book cover design.</div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
 
   <!-- Minimal Book Formatting Section with Gradient Cards and Modal -->
   <section class="py-4 bg-light">
@@ -729,7 +892,7 @@
     const imageModal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
 
-    imageModal.addEventListener('show.bs.modal', function(event) {
+    imageModal.addEventListener('show.bs.modal', function (event) {
       const card = event.relatedTarget; // clicked card
       const imgSrc = card.getAttribute('data-bs-img');
       modalImage.src = imgSrc;
@@ -742,216 +905,265 @@
     <div class="container">
       <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Cover Designs</h2>
       <div class="row g-4">
+
         <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="50">
-
           <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3" data-aos="" data-aos-delay="200">
-                <div class="card overflow-hidden h-100 border-0 shadow-sm">
-                  <figure class="m-0 position-relative">
-                    <img src="./assets/images/Cover_section/Cover 3.jpg" class="img-fluid w-100 gallery-img"
-                      alt="Cover 2" loading="lazy">
-                    <figcaption>
-
-                      <p>Modern and stylish book cover.</p>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3" data-aos="" data-aos-delay="200">
-                <div class="card overflow-hidden h-100 border-0 shadow-sm">
-                  <figure class="m-0 position-relative">
-                    <img src="./assets/images/Cover_section/Cover 2.jpg" class="img-fluid w-100 gallery-img"
-                      alt="Cover 2" loading="lazy">
-                    <figcaption>
-
-                      <p>Modern and stylish book cover.</p>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3" data-aos="" data-aos-delay="200">
-                <div class="card overflow-hidden h-100 border-0 shadow-sm">
-                  <figure class="m-0 position-relative">
-                    <img src="./assets/images/Cover_section/Cover 4.jpg" class="img-fluid w-100 gallery-img"
-                      alt="Cover 2" loading="lazy">
-                    <figcaption>
-
-                      <p>Modern and stylish book cover.</p>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3" data-aos="" data-aos-delay="200">
-                <div class="card overflow-hidden h-100 border-0 shadow-sm">
-                  <figure class="m-0 position-relative">
-                    <img src="./assets/images/Cover_section/Cover 1.jpg" class="img-fluid w-100 gallery-img"
-                      alt="Cover 2" loading="lazy">
-                    <figcaption>
-
-                      <p>Modern and stylish book cover.</p>
-                    </figcaption>
-                  </figure>
+            <!-- Card 1 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-bs-img="./assets/images/Cover_section/Cover 3.jpg">
+                <img src="./assets/images/Cover_section/Cover 3.jpg" alt="Cover 3">
+                <div class="top-overlay"></div>
+                <div class="bottom-right-overlay">
+                  <div class="caption">✨ Modern and stylish book cover.</div>
                 </div>
               </div>
             </div>
 
+            <!-- Card 2 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-bs-img="./assets/images/Cover_section/Cover 2.jpg">
+                <img src="./assets/images/Cover_section/Cover 2.jpg" alt="Cover 2">
+                <div class="top-overlay"></div>
+                <div class="bottom-right-overlay">
+                  <div class="caption">🎨 Creative and minimalistic design.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-bs-img="./assets/images/Cover_section/Cover 4.jpg">
+                <img src="./assets/images/Cover_section/Cover 4.jpg" alt="Cover 4">
+                <div class="top-overlay"></div>
+                <div class="bottom-right-overlay">
+                  <div class="caption">📚 Elegant layout with modern typography.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-bs-img="./assets/images/Cover_section/Cover 1.jpg">
+                <img src="./assets/images/Cover_section/Cover 1.jpg" alt="Cover 1">
+                <div class="top-overlay"></div>
+                <div class="bottom-right-overlay">
+                  <div class="caption">🚀 Eye-catching cover for your next bestseller.</div>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
+
+
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Cover_section/cover main image.jpg" style="height: 100%;"
-                  class="img-fluid w-100 gallery-img" alt="Cover 2" loading="lazy">
-                <figcaption>
-
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+          <div data-aos="" data-aos-delay="200">
+            <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+              data-bs-img="./assets/images/Cover_section/cover main image.jpg">
+              <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100" alt="Main Cover"
+                loading="lazy" style="height: 100%; object-fit: cover;">
+              <div class="top-overlay"></div>
+              <div class="bottom-right-overlay">
+                <div class="caption">📘 Modern and stylish book cover design.</div>
+              </div>
             </div>
           </div>
         </div>
+
+
         <!-- section 2 -->
 
       </div>
     </div>
   </section>
 
-  <!-- Mookup design -->
+  <!-- Mockup Design Section -->
   <section class="py-4 bg-light">
     <div class="container">
-      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Mokup Design </h2>
+      <h2 class="mb-4 text-left fw-bold" data-aos="fade-up">Mockup Design</h2>
       <div class="row g-4">
 
-        <!-- section 2 -->
+        <!-- Large Card -->
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Sliders/Slider 4.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
-                  loading="lazy">
-                <figcaption>
-
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Sliders/Slider 4.jpg">
+            <img src="./assets/images/Sliders/Slider 4.jpg" class="img-fluid w-100" alt="Mockup 1" loading="lazy"
+              style="height: 100%; object-fit: cover;">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🖼️ Modern and stylish book mockup.</div>
             </div>
           </div>
         </div>
 
+        <!-- Small Cards -->
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Sliders/Slider 3.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
-                  loading="lazy">
-                <figcaption>
-
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Sliders/Slider 3.jpg">
+            <img src="./assets/images/Sliders/Slider 3.jpg" class="img-fluid w-100" alt="Mockup 2" loading="lazy">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">📚 Elegant and realistic book render.</div>
             </div>
           </div>
         </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Sliders/Slider 2.jpg" class="img-fluid w-100 gallery-img" alt="Cover 2"
-                  loading="lazy">
-                <figcaption>
 
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Sliders/Slider 2.jpg">
+            <img src="./assets/images/Sliders/Slider 2.jpg" class="img-fluid w-100" alt="Mockup 3" loading="lazy">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">📖 Clean and minimal cover visualization.</div>
             </div>
           </div>
         </div>
-        <!-- secod section -->
+
+        <!-- Second Row of Cards -->
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
-                  alt="Cover 2" loading="lazy">
-                <figcaption>
-
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cover_section/cover main image.jpg">
+            <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100" alt="Mockup 4"
+              loading="lazy">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🎨 Vibrant mockup showcasing final layout.</div>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
-                  alt="Cover 2" loading="lazy">
-                <figcaption>
 
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cover_section/cover main image.jpg">
+            <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100" alt="Mockup 5"
+              loading="lazy">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🪶 Soft tone realistic book placement.</div>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="" data-aos="" data-aos-delay="200">
-            <div class="card overflow-hidden h-100 border-0 shadow-sm">
-              <figure class="m-0 position-relative">
-                <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100 gallery-img"
-                  alt="Cover 2" loading="lazy">
-                <figcaption>
 
-                  <p>Modern and stylish book cover.</p>
-                </figcaption>
-              </figure>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-custom" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-bs-img="./assets/images/Cover_section/cover main image.jpg">
+            <img src="./assets/images/Cover_section/cover main image.jpg" class="img-fluid w-100" alt="Mockup 6"
+              loading="lazy">
+            <div class="top-overlay"></div>
+            <div class="bottom-right-overlay">
+              <div class="caption">🚀 Eye-catching mockup ready for showcase.</div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- Pricing -->
-  <section class="py-4">
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-5 bg-light">
     <div class="container">
       <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">Services & Pricing</h2>
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
+
+        <!-- Basic Package -->
         <div class="col-md-4" data-aos="fade-up">
-          <div class="card p-4 h-100 text-center">
-            <h5>Basic Formatting For Printing</h5>
-            <p class="card-price">$ 9,999</p>
-            <p class="small">Ideal for short books and simple layouts.</p>
-            <a href="contact.html" class="btn btn-outline-primary">Get Started</a>
+          <div class="pricing-card card p-4 h-100 text-center border-0 shadow-sm">
+            <h5 class="fw-bold mb-2">Basic Formatting For Printing</h5>
+            <p class="card-price display-6 fw-bold text-dark mb-1">$150</p>
+            <p class="small text-muted mb-3">Ideal for short books and simple layouts.</p>
+            <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4">Get Started</a>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
-          <div class="card p-4 h-100 text-center border-primary">
-            <h5>Standard Package</h5>
-            <p class="card-price">$ 14,999</p>
-            <p class="small">Includes advanced typesetting and TOC.</p>
-            <a href="contact.html" class="btn btn-primary">Order Now</a>
+
+        <!-- Standard Package -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card card p-4 h-100 text-center border-0 shadow highlight-card">
+            <h5 class="fw-bold mb-2">Standard Package</h5>
+            <p class="card-price display-6 fw-bold text-dark mb-1">$220</p>
+            <p class="small text-muted mb-3">Includes advanced typesetting and TOC.</p>
+            <a href="contact.html" class="btn btn-primary rounded-pill px-4">Order Now</a>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
-          <div class="card p-4 h-100 text-center">
-            <h5>eBook Formatting</h5>
-            <p class="card-price">$ 7,499</p>
-            <p class="small">ePub/Mobi conversion for Kindle.</p>
-            <a href="contact.html" class="btn btn-outline-primary">Get Quote</a>
+
+        <!-- Premium Package -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="pricing-card card p-4 h-100 text-center border-0 shadow-sm">
+            <h5 class="fw-bold mb-2">Premium eBook Formatting</h5>
+            <p class="card-price display-6 fw-bold text-dark mb-1">$300</p>
+            <p class="small text-muted mb-3">Complete formatting + ePub/Mobi conversion.</p>
+            <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4">Get Quote</a>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Slider -->
+  <section id="testimonials" class="py-4 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">What Our Clients Say</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3 shadow-sm"
+                alt="Ayesha" width="100" height="100">
+              <p class="fst-italic text-muted">"Excellent formatting — my paperback looked professional on day one."</p>
+              <h5 class="mb-0 fw-semibold">Ayesha</h5>
+              <small class="text-muted">Author</small>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" class="rounded-circle mb-3 shadow-sm" alt="Omar"
+                width="100" height="100">
+              <p class="fst-italic text-muted">"Fast turnaround and helpful communication."</p>
+              <h5 class="mb-0 fw-semibold">Omar</h5>
+              <small class="text-muted">Self-Published Author</small>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="d-flex flex-column align-items-center text-center p-4">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3 shadow-sm"
+                alt="Sarah" width="100" height="100">
+              <p class="fst-italic text-muted">"My eBook formatting worked perfectly on Kindle devices."</p>
+              <h5 class="mb-0 fw-semibold">Sarah</h5>
+              <small class="text-muted">Indie Publisher</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators mt-3">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
+
       </div>
     </div>
   </section>
@@ -962,9 +1174,9 @@
       <div class="row g-5 align-items-start">
 
         <!-- FAQ Section -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 ">
           <h2 class="mb-4 text-center fw-semibold" data-aos="fade-up">Services & Pricing</h2>
-          <div class="accordion" id="faqAccordion" data-aos="fade-up">
+          <div class="accordion" id="faqAccordion" data-aos="fade-up ">
 
             <div class="accordion-item">
               <h2 class="accordion-header" id="faq1">
@@ -1060,7 +1272,7 @@
         </div>
 
         <!-- Contact Form Section -->
-        <div class="col-lg-6">
+        <div id="contact" class="col-lg-6 ">
           <div class="p-4 bg-light rounded shadow-sm" data-aos="fade-up">
 
             <h2 class="text-center fw-semibold mb-3">Contact Us!</h2>
@@ -1127,126 +1339,76 @@
     </div>
   </section>
 
-  <!-- Testimonials Slider -->
-  <section class="py-4 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center fw-bold" data-aos="fade-up">What Our Clients Say</h2>
 
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <!-- Testimonial 1 -->
-          <div class="carousel-item active">
-            <div class="d-flex flex-column align-items-center text-center p-4">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3 shadow-sm"
-                alt="Ayesha" width="100" height="100">
-              <p class="fst-italic text-muted">"Excellent formatting — my paperback looked professional on day one."</p>
-              <h5 class="mb-0 fw-semibold">Ayesha</h5>
-              <small class="text-muted">Author</small>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="carousel-item">
-            <div class="d-flex flex-column align-items-center text-center p-4">
-              <img src="https://randomuser.me/api/portraits/men/46.jpg" class="rounded-circle mb-3 shadow-sm" alt="Omar"
-                width="100" height="100">
-              <p class="fst-italic text-muted">"Fast turnaround and helpful communication."</p>
-              <h5 class="mb-0 fw-semibold">Omar</h5>
-              <small class="text-muted">Self-Published Author</small>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="carousel-item">
-            <div class="d-flex flex-column align-items-center text-center p-4">
-              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3 shadow-sm"
-                alt="Sarah" width="100" height="100">
-              <p class="fst-italic text-muted">"My eBook formatting worked perfectly on Kindle devices."</p>
-              <h5 class="mb-0 fw-semibold">Sarah</h5>
-              <small class="text-muted">Indie Publisher</small>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
-        <!-- Indicators -->
-        <div class="carousel-indicators mt-3">
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- Blog Section -->
-  <section class="py-4 bg-light">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="mb-5 text-center fw-bold" data-aos="fade-up">From Our Latest Blog</h2>
+      <h2 class="mb-5 text-center fw-bold" data-aos="fade-up">📝 From Our Latest Blog</h2>
 
-      <!-- Blog Post 1 -->
-      <div class="row g-4 mb-4 align-items-center" data-aos="fade-up">
-        <div class="col-md-5">
-          <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded-3 shadow-sm"
-            alt="How to Format Your Paperback">
+      <div class="row g-4">
+
+        <!-- Blog Card 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card h-100 shadow-sm blog-card overflow-hidden  border-0">
+            <a href="blog-post-1.html" class="text-decoration-none text-dark">
+              <img src="https://picsum.photos/600/400?random=1" class="card-img-top blog-img" alt="Format Paperback">
+              <div class="card-body">
+                <h5 class="fw-semibold">How to Format Your Paperback for Amazon KDP</h5>
+                <p class="small text-muted mb-2">📅 May 10, 2025 • ✍️ By Admin</p>
+                <p class="text-muted small mb-3">
+                  Learn how to properly set up margins, bleed, and trim size for Amazon KDP paperback publishing.
+                </p>
+                <span class="btn btn-sm btn-outline-primary">Read More</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="col-md-7">
-          <h5 class="fw-semibold">How to Format Your Paperback for Amazon KDP</h5>
-          <p class="small text-muted mb-2">📅 May 10, 2025 • ✍️ By Admin</p>
-          <p class="text-muted small">
-            A step-by-step guide to prepare your manuscript for paperback printing on KDP.
-          </p>
-          <a href="blog-post-1.html" class="btn btn-sm btn-primary mt-2">View Post</a>
+
+        <!-- Blog Card 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 shadow-sm blog-card overflow-hidden border-0">
+            <a href="blog-post-2.html" class="text-decoration-none text-dark">
+              <img src="https://picsum.photos/600/400?random=2" class="card-img-top blog-img"
+                alt="Formatting eBook for Kindle">
+              <div class="card-body">
+                <h5 class="fw-semibold">Essential Tips for Formatting Your eBook for Kindle</h5>
+                <p class="small text-muted mb-2">📅 Apr 28, 2025 • ✍️ By Admin</p>
+                <p class="text-muted small mb-3">
+                  Master the art of formatting eBooks for Kindle with these key layout and design principles.
+                </p>
+                <span class="btn btn-sm btn-outline-primary">Read More</span>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Blog Card 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm blog-card overflow-hidden border-0">
+            <a href="blog-post-3.html" class="text-decoration-none text-dark">
+              <img src="https://picsum.photos/600/400?random=3" class="card-img-top blog-img" alt="Formatting Mistakes">
+              <div class="card-body">
+                <h5 class="fw-semibold">Common Manuscript Formatting Mistakes to Avoid</h5>
+                <p class="small text-muted mb-2">📅 Apr 15, 2025 • ✍️ By Admin</p>
+                <p class="text-muted small mb-3">
+                  Avoid these simple but costly mistakes when formatting your manuscript for self-publishing.
+                </p>
+                <span class="btn btn-sm btn-outline-primary">Read More</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
       </div>
 
-      <!-- Blog Post 2 -->
-      <div class="row g-4 mb-4 align-items-center flex-md-row-reverse" data-aos="fade-up" data-aos-delay="80">
-        <div class="col-md-5">
-          <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded-3 shadow-sm"
-            alt="Formatting eBook for Kindle">
-        </div>
-        <div class="col-md-7">
-          <h5 class="fw-semibold">Essential Tips for Formatting Your eBook for Kindle</h5>
-          <p class="small text-muted mb-2">📅 Apr 28, 2025 • ✍️ By Admin</p>
-          <p class="text-muted small">
-            Best practices to ensure your eBook displays correctly across Kindle devices.
-          </p>
-          <a href="blog-post-2.html" class="btn btn-sm btn-primary mt-2">View Post</a>
-        </div>
-      </div>
-
-      <!-- Blog Post 3 -->
-      <div class="row g-4 mb-4 align-items-center" data-aos="fade-up" data-aos-delay="160">
-        <div class="col-md-5">
-          <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded-3 shadow-sm"
-            alt="Manuscript Formatting Tips">
-        </div>
-        <div class="col-md-7">
-          <h5 class="fw-semibold">Common Manuscript Formatting Mistakes to Avoid</h5>
-          <p class="small text-muted mb-2">📅 Apr 15, 2025 • ✍️ By Admin</p>
-          <p class="text-muted small">
-            Learn about the most common formatting mistakes and how to fix them before publishing.
-          </p>
-          <a href="blog-post-3.html" class="btn btn-sm btn-primary mt-2">View Post</a>
-        </div>
-      </div>
-
+      <!-- View All Button -->
+      <!-- <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+        <a href="blog.html" class="btn btn-outline-primary px-4 py-2">View All Posts</a>
+      </div> -->
     </div>
   </section>
-
 
   <!-- CTA -->
   <section class="py-4 bg-primary text-light">
@@ -1257,41 +1419,93 @@
   </section>
 
   <!-- ✅ Footer -->
-  <footer class="bg-dark text-light pt-4">
+  <footer class="bg-dark text-light pt-4 mt-5">
     <div class="container">
-      <div class="row">
+      <div class="row gy-3">
         <div class="col-md-6">
-          <h4 class="mt-3">KDP Book Design Ready For Publishing</h4>
-          <p class="small">Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.
-          </p>
+          <div class="d-flex flex-column gap-2">
+            <div>
+              <img style="height: 40px;" class="d-inline-block img-fluid" src="./assets/images/Logo white text-01.png"
+                alt="KDP Book Design Logo">
+            </div>
+            <h4 class="mt-2 fw-semibold" style="color: rgba(255,255,255,0.9);">
+              KDP Book Design Ready For Publishing
+            </h4>
+            <p class="mb-0" style="color: rgba(255,255,255,0.75);">
+              Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.
+            </p>
+          </div>
         </div>
+
         <div class="col-md-3">
-          <h6>Quick Links</h6>
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Quick Links</h6>
           <ul class="list-unstyled small">
-            <li><a class="text-light" href="#">Blog</a></li>
-            <li><a class="text-light" href="#">Privacy Policy</a></li>
-            <li><a class="text-light" href="#">Terms & Conditions</a></li>
-            <li><a class="text-light" href="#">Contact</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="blog.html">Blog</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="terms.html">Terms & Conditions</a></li>
+            <li><a class="text-decoration-none d-block" style="color: rgba(255,255,255,0.75);"
+                href="contact.html">Contact</a></li>
           </ul>
         </div>
+
         <div class="col-md-3">
-          <h6>Follow Us</h6>
-          <a class="text-light me-2" href="#"><i class="fab fa-facebook fa-lg"></i></a>
-          <a class="text-light me-2" href="#"><i class="fab fa-instagram fa-lg"></i></a>
-          <a class="text-light" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Follow Us</h6>
+          <div class="d-flex align-items-center">
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-facebook fa-lg"></i></a>
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
         </div>
       </div>
-      <div class="row shadow">
-        <div class="col-md-6">
-          <div class="text-center text-sm-start py-3 small">&copy; 2025 KDP Book Formatting. All rights reserved.</div>
+
+      <hr class="border-secondary my-3">
+
+      <div class="row align-items-center pb-4">
+        <div class="col-md-6 text-center text-md-start small" style="color: rgba(255,255,255,0.6);">
+          &copy; 2025 <strong style="color: rgba(255,255,255,0.85);">KDP Book Formatting</strong>. All rights reserved.
         </div>
-        <div class="col-md-6">
-          <div class="text-center text-sm-end py-3 small">Powered by <a href="https://tanidotdevfolio.netlify.app"
-              target="_blank" class="text-warning">Tanveer.Ahmad</a></div>
+        <div class="col-md-6 text-center text-md-end small" style="color: rgba(255,255,255,0.6);">
+          Powered by
+          <a href="https://tanidotdevfolio.netlify.app" target="_blank" class="fw-semibold text-decoration-none"
+            style="color: #fcbf49;">
+            Tanveer Ahmad
+          </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <style>
+    footer a:hover {
+      color: #ffa20e !important;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    footer h4,
+    footer h6 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    footer p,
+    footer a,
+    footer small {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    footer a:hover {
+      color: #fcbf49 !important;
+      transition: color 0.3s ease;
+    }
+  </style>
+
   <!-- Modal for picture full view -->
   <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg p-3">
@@ -1311,51 +1525,71 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    $(document).ready(function() {
-      $(".owl-carousel").owlCarousel({
+    $(document).ready(function () {
+      // Initialize Owl Carousel
+      const $owl = $(".owl-carousel");
+      $owl.owlCarousel({
         items: 1,
         loop: true,
         autoplay: true,
         autoplayTimeout: 10000,
         nav: false,
-        animateOut: 'fadeOut'
+        animateOut: "fadeOut",
       });
-    });
 
-    AOS.init();
+      AOS.init();
 
-    new Typed("#typed-1", {
-      strings: ["Professional KDP Formatting"],
-      typeSpeed: 100,
-      backSpeed: 70,
-      backDelay: 1500, // ✅ wait time before deleting (in ms)
-      loop: true
-    });
+      // Typed.js instances
+      let typedInstance = null;
 
-    new Typed("#typed-2", {
-      strings: ["Custom Cover Designs"],
-      typeSpeed: 100,
-      backSpeed: 70,
-      backDelay: 1500, // ✅ 1.5 second pause
-      loop: true
-    });
+      // Typing strings for each slide (index-based)
+      const slideTexts = [
+        ["✍️ Professional KDP Formatting"],       // Slide 1
+        ["🎨 Custom Cover Designs"],              // Slide 2
+        ["🚀 Ready To Publish KDP-Book"],  // Slide 3
+        ["📚 Publishing Made Easy"],              // Slide 4
+      ];
 
-    new Typed("#typed-3", {
-      strings: ["Get Ready To Publish (KD_Ebook)"],
-      typeSpeed: 100,
-      backSpeed: 70,
-      backDelay: 1500, // ✅ 1.5 second pause
-      loop: true
-    });
+      // Function to start typing on the current active slide
+      function startTyping(slideIndex) {
+        const typedTarget = `.owl-item.active .slide-content h2 span`;
+        const element = document.querySelector(typedTarget);
+        if (!element) return;
 
-    new Typed("#typed-3", {
-      strings: ["Publishing Made Easy"],
-      typeSpeed: 100,
-      backSpeed: 70,
-      backDelay: 1500,
-      loop: true
+        typedInstance = new Typed(element, {
+          strings: slideTexts[slideIndex],
+          typeSpeed: 100,
+          backSpeed: 70,
+          backDelay: 1500,
+          loop: false, // only once per slide
+          showCursor: true,
+        });
+      }
+
+      // Function to stop previous typing
+      function stopTyping() {
+        if (typedInstance) {
+          typedInstance.destroy();
+          typedInstance = null;
+        }
+      }
+
+      // On carousel change
+      $owl.on("changed.owl.carousel", function (event) {
+        stopTyping(); // Stop old typing
+        const currentIndex = event.item.index % slideTexts.length;
+
+        // Wait a bit after slide transition, then start typing
+        setTimeout(() => {
+          startTyping(currentIndex);
+        }, 800); // 800ms delay after slide transition
+      });
+
+      // Initial typing when page loads
+      startTyping(0);
     });
   </script>
+
   <script>
     const galleryImages = document.querySelectorAll(".gallery-img");
     const modal = document.getElementById("imageModal");

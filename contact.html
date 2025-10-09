@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact - KDP Book Formatting</title>
   <meta name="description" content="Contact us to request a quote or ask about our KDP formatting services.">
-  <meta name="keywords" content="KDP, book formatting, paperback formatting, hardcover formatting, ebook formatting, Amazon KDP">
+  <meta name="keywords"
+    content="KDP, book formatting, paperback formatting, hardcover formatting, ebook formatting, Amazon KDP">
   <meta name="author" content="Tanveer Ahmad">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Contact - KDP Book Formatting">
   <meta property="og:description" content="Contact us to request a quote or ask about our KDP formatting services.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.kdpbookformat.com/">
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,66 +26,197 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body style="font-family: 'Poppins', sans-serif;">
 
-<div class="container py-5">
-  <h1>Contact Us</h1>
-  <p>Send your project details and we'll reply with a quote.</p>
-  <div class="row">
-    <div class="col-md-6">
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <div class="mb-3"><label class="form-label">Name</label><input name="name" class="form-control" required></div>
-        <div class="mb-3"><label class="form-label">Email</label><input name="_replyto" type="email" class="form-control" required></div>
-        <div class="mb-3"><label class="form-label">Service</label>
-          <select name="service" class="form-select">
-            <option>Book Formatting</option>
-            <option>Format Your Paperback</option>
-            <option>Format Your Hardcover</option>
-            <option>Format Your eBook</option>
-          </select></div>
-        <div class="mb-3"><label class="form-label">Message</label><textarea name="message" class="form-control" rows="5" required></textarea></div>
-        <button class="btn btn-primary" type="submit">Send Message</button>
-      </form>
-    </div>
-    <div class="col-md-6">
-      <h6>Contact info</h6>
-      <p class="small"><i class="fa fa-phone me-2"></i> +92-300-1234567</p>
-      <p class="small"><i class="fa fa-envelope me-2"></i> info@kdpbookformat.com</p>
-      <h6 class="mt-3">Location</h6>
-      <p class="small">Lahore, Pakistan</p>
-    </div>
-  </div>
-</div>
+  <!-- Contact Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4" data-aos="fade-up">📩 Get in Touch</h2>
+      <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
+        Have a question or project in mind? Fill out the form below and we’ll get back to you soon.
+      </p>
 
-<!-- Footer -->
-<footer class="bg-dark text-light pt-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h5>KDP Book Formatting</h5>
-        <p class="small">Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.</p>
-      </div>
-      <div class="col-md-3">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled small">
-          <li><a class="text-light" href="blog.html">Blog</a></li>
-          <li><a class="text-light" href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a class="text-light" href="terms.html">Terms &amp; Conditions</a></li>
-          <li><a class="text-light" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6>Follow Us</h6>
-        <a class="text-light me-2" href="#"><i class="fab fa-facebook fa-lg"></i></a>
-        <a class="text-light me-2" href="#"><i class="fab fa-instagram fa-lg"></i></a>
-        <a class="text-light" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+      <div class="row g-4 align-items-start">
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="p-4 bg-white rounded shadow-sm" data-aos="fade-up">
+            <h4 class="text-center fw-semibold mb-3">Contact Us!</h4>
+
+            <form class="row g-3" action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="col-md-6">
+                <label class="form-label">Your Name:</label>
+                <input type="text" class="form-control" name="name" placeholder="Type your name" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your E-mail: <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="_replyto" placeholder="Type your email address" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your Phone:</label>
+                <input type="text" class="form-control" name="phone" placeholder="Type your phone number with cc">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Attach Files (optional)</label>
+                <input type="file" class="form-control" name="files">
+                <small class="text-muted">We accept all file formats</small>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Your Interests: <span class="text-danger">*</span></label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="ebook" name="interest" value="Ebook Formatting">
+                  <label class="form-check-label" for="ebook">Ebook Formatting</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="print" name="interest" value="Print Formatting">
+                  <label class="form-check-label" for="print">Print Formatting</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cover" name="interest" value="Cover Design">
+                  <label class="form-check-label" for="cover">Cover Design</label>
+                </div>
+                <select class="form-select mt-2" name="language" aria-label="Select Language">
+                  <option selected>Select Language</option>
+                  <option value="English">English</option>
+                  <option value="Urdu">Urdu</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" name="message" rows="5"
+                  placeholder="Tell us about what you want"></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn text-white px-4" style="background-color: #ffa20e;">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 bg-white rounded shadow-sm">
+            <h5 class="fw-semibold mb-3">📞 Contact Information</h5>
+            <p class="small mb-2"><i class="fa fa-phone me-2 text-warning"></i> +92-300-1234567</p>
+            <p class="small mb-2"><i class="fa fa-envelope me-2 text-warning"></i> info@kdpbookformat.com</p>
+            <p class="small"><i class="fa fa-map-marker-alt me-2 text-warning"></i> Lahore, Pakistan</p>
+
+            <hr>
+            <h6 class="fw-semibold">🕒 Working Hours</h6>
+            <p class="small">Mon - Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed</p>
+
+            <hr>
+            <h6 class="fw-semibold">🌐 Follow Us</h6>
+            <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-dark me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="text-center py-3 small">&copy; 2025 KDP Book Formatting. All rights reserved.</div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/js/main.js"></script>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-dark text-light pt-4 mt-5">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <div class="d-flex flex-column gap-2">
+            <div>
+              <img style="height: 40px;" class="d-inline-block img-fluid" src="./assets/images/Logo white text-01.png"
+                alt="KDP Book Design Logo">
+            </div>
+            <h4 class="mt-2 fw-semibold" style="color: rgba(255,255,255,0.9);">
+              KDP Book Design Ready For Publishing
+            </h4>
+            <p class="mb-0" style="color: rgba(255,255,255,0.75);">
+              Professional formatting services for Paperback, Hardcover, and eBook — ready for Amazon KDP.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="blog.html">Blog</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a class="text-decoration-none d-block mb-1" style="color: rgba(255,255,255,0.75);"
+                href="terms.html">Terms & Conditions</a></li>
+            <li><a class="text-decoration-none d-block" style="color: rgba(255,255,255,0.75);"
+                href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-semibold mb-2" style="color: rgba(255,255,255,0.85);">Follow Us</h6>
+          <div class="d-flex align-items-center">
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-facebook fa-lg"></i></a>
+            <a class="me-3" href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" style="color: rgba(255,255,255,0.8);"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-3">
+
+      <div class="row align-items-center pb-4">
+        <div class="col-md-6 text-center text-md-start small" style="color: rgba(255,255,255,0.6);">
+          &copy; 2025 <strong style="color: rgba(255,255,255,0.85);">KDP Book Formatting</strong>. All rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end small" style="color: rgba(255,255,255,0.6);">
+          Powered by
+          <a href="https://tanidotdevfolio.netlify.app" target="_blank" class="fw-semibold text-decoration-none"
+            style="color: #fcbf49;">
+            Tanveer Ahmad
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    footer a:hover {
+      color: #ffa20e !important;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    footer h4,
+    footer h6 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    footer p,
+    footer a,
+    footer small {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    footer a:hover {
+      color: #fcbf49 !important;
+      transition: color 0.3s ease;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
